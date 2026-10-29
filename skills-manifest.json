@@ -1,8 +1,8 @@
 {
   "snapshot_date": "2026-10-29",
-  "personal_skill_count": 33,
-  "repository_skill_count": 34,
-  "source_scope": "All skill packages found under the user-level ~/.workbuddy/skills directory, plus the existing skill from this repository root.",
+  "personal_skill_count": 32,
+  "repository_skill_count": 33,
+  "source_scope": "User-level personal skills copied from ~/.workbuddy/skills, with one owner-designated skill omitted, plus the existing skill from this repository root.",
   "exclusions": "Built-in, marketplace, plugin, and connector skills are not vendored; those are maintained by their upstream distributions.",
   "skills": [
     {
@@ -86,13 +86,6 @@
       "name": "idea-evaluator",
       "directory": "idea-evaluator",
       "source_directory": "idea-evaluator",
-      "category": "research/ideas-and-methods",
-      "source": "user-level ~/.workbuddy/skills"
-    },
-    {
-      "name": "mogpu-research-kernel",
-      "directory": "mogpu-research-kernel",
-      "source_directory": "mogpu-research-kernel",
       "category": "research/ideas-and-methods",
       "source": "user-level ~/.workbuddy/skills"
     },
