@@ -1,0 +1,247 @@
+{
+  "snapshot_date": "2026-10-29",
+  "personal_skill_count": 33,
+  "repository_skill_count": 34,
+  "source_scope": "All skill packages found under the user-level ~/.workbuddy/skills directory, plus the existing skill from this repository root.",
+  "exclusions": "Built-in, marketplace, plugin, and connector skills are not vendored; those are maintained by their upstream distributions.",
+  "skills": [
+    {
+      "name": "self-improvement",
+      "directory": "self-improvement",
+      "source_directory": "self-improving-agent__skillhub",
+      "category": "agent-meta",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "aihot",
+      "directory": "aihot",
+      "source_directory": "aihot",
+      "category": "ai-information",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "job-search-accelerator",
+      "directory": "job-search-accelerator",
+      "source_directory": "job-search-accelerator",
+      "category": "career-and-jobs",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "github-python-repo",
+      "directory": "github-python-repo",
+      "source_directory": "github-python-repo",
+      "category": "developer-tools",
+      "source": "pre-existing repository skill"
+    },
+    {
+      "name": "supervisor-skills-repo-port",
+      "directory": "supervisor-skills-repo-port",
+      "source_directory": "supervisor-skills-repo-port",
+      "category": "developer-tools",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "markdown-to-pdf-offline",
+      "directory": "markdown-to-pdf-offline",
+      "source_directory": "markdown-to-pdf-offline",
+      "category": "documents-and-conversion",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "benchmark-baseline-table",
+      "directory": "benchmark-baseline-table",
+      "source_directory": "benchmark-baseline-table",
+      "category": "research/benchmarks-and-reproduction",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "benchmark-paper-inventory",
+      "directory": "benchmark-paper-inventory",
+      "source_directory": "benchmark-paper-inventory",
+      "category": "research/benchmarks-and-reproduction",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-baseline-comparison",
+      "directory": "research-baseline-comparison",
+      "source_directory": "research-baseline-comparison",
+      "category": "research/benchmarks-and-reproduction",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-baseline-reproduction",
+      "directory": "research-baseline-reproduction",
+      "source_directory": "research-baseline-reproduction",
+      "category": "research/benchmarks-and-reproduction",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "sota-table-caliber-migration",
+      "directory": "sota-table-caliber-migration",
+      "source_directory": "sota-table-caliber-migration",
+      "category": "research/benchmarks-and-reproduction",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "idea-evaluator",
+      "directory": "idea-evaluator",
+      "source_directory": "idea-evaluator",
+      "category": "research/ideas-and-methods",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "mogpu-research-kernel",
+      "directory": "mogpu-research-kernel",
+      "source_directory": "mogpu-research-kernel",
+      "category": "research/ideas-and-methods",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-challenge-definition",
+      "directory": "research-challenge-definition",
+      "source_directory": "research-challenge-definition",
+      "category": "research/ideas-and-methods",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-innovation-validation",
+      "directory": "research-innovation-validation",
+      "source_directory": "research-innovation-validation",
+      "category": "research/ideas-and-methods",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "deep-research",
+      "directory": "deep-research",
+      "source_directory": "deep-research",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "paper-quick-reader",
+      "directory": "paper-quick-reader",
+      "source_directory": "paper-quick-reader",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-knowledge-map",
+      "directory": "research-knowledge-map",
+      "source_directory": "research-knowledge-map",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-literature-scout",
+      "directory": "research-literature-scout",
+      "source_directory": "research-literature-scout",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-paper-reading",
+      "directory": "research-paper-reading",
+      "source_directory": "research-paper-reading",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "verified-research-report",
+      "directory": "verified-research-report",
+      "source_directory": "verified-research-report",
+      "category": "research/literature-and-mapping",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-seven-round-orchestrator",
+      "directory": "research-seven-round-orchestrator",
+      "source_directory": "research-seven-round-orchestrator",
+      "category": "research/workflows",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "research-weekly-review",
+      "directory": "research-weekly-review",
+      "source_directory": "research-weekly-review",
+      "category": "research/workflows",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "vibe-research-workflow",
+      "directory": "vibe-research-workflow",
+      "source_directory": "vibe-research-workflow",
+      "category": "research/workflows",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "benchmark-paper-template",
+      "directory": "benchmark-paper-template",
+      "source_directory": "benchmark-paper-template",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "intro-drafter",
+      "directory": "intro-drafter",
+      "source_directory": "intro-drafter",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "paper-math-note",
+      "directory": "paper-math-note",
+      "source_directory": "paper-math-note",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "paper-polish",
+      "directory": "paper-polish",
+      "source_directory": "paper-polish",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "paper-venue-ccf-verify",
+      "directory": "paper-venue-ccf-verify",
+      "source_directory": "paper-venue-ccf-verify",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "paper-writer",
+      "directory": "paper-writer",
+      "source_directory": "paper-writer",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "pre-submission-reviewer",
+      "directory": "pre-submission-reviewer",
+      "source_directory": "pre-submission-reviewer",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "tech-paper-template",
+      "directory": "tech-paper-template",
+      "source_directory": "tech-paper-template",
+      "category": "research/writing-and-publication",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "drawio-reconstruction",
+      "directory": "drawio-reconstruction",
+      "source_directory": "drawio-reconstruction",
+      "category": "visualization",
+      "source": "user-level ~/.workbuddy/skills"
+    },
+    {
+      "name": "figure-designer",
+      "directory": "figure-designer",
+      "source_directory": "figure-designer",
+      "category": "visualization",
+      "source": "user-level ~/.workbuddy/skills"
+    }
+  ]
+}

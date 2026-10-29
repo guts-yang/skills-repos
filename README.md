@@ -1,72 +1,37 @@
-# github-python-repo
+# Personal Skills Repository
 
-以 Python 工具链为主的任意 GitHub 仓库集成 skill。给定一个 `github.com` 链接（仓库 / Pull Request / commit / 文件行），可以完成四件事：**定位仓库、只读检索源码、评审 Pull Request、提交 Python 代码变更**。
+个人 skills 分类集成仓库。以单个 `SKILL.md` 为技能入口，完整保留技能目录中的脚本、参考资料、资源与元数据。
 
-## 能力范围
+## 快照范围
 
-- **仓库定位与只读检索**：按「当前工作区 → 聚合目录 → 邻近 `pyproject.toml` / `setup.py` → 临时克隆」的优先级找到目标仓库；检索时排除 `__pycache__`、`.venv`、`site-packages`、`dist`、`build` 等目录，避免上下文被噪声占满；所有结论强制落到 `文件:行号 @ ref`，不臆测代码行为
-- **Pull Request 评审**：一次取回 PR 元信息、完整 diff 与目标分支上的项目规范文件（`CONTRIBUTING.md`、`pyproject.toml`、`tox.ini`、`.pre-commit-config.yaml` 等）；按 50 行 / 300 行两档分级，从规范合规、Bug 猎人、深度上下文三个视角分别审；合并去重后再按严重度排序，条数设上限
-- **评论输出**：能锚定到行的走行内评论，跨文件的走整体评论；发表前必须由用户本人确认，确认后逐条串行提交，避免并发写入
-- **Python 代码变更**：在隔离虚拟环境中修改，过 `ruff` / `mypy` / `pytest` 门禁后才提交；commit 遵循仓库约定，push 与开 PR 需显式确认
+- **33 个用户级个人 skills**：复制自 `~/.workbuddy/skills/`，截至 **2026-10-29**。
+- **1 个仓库原有 skill**：`github-python-repo`，保留其脚本与文档。
+- 仓库共 **34 个技能包**。各包原始内容独立存放，不把所有技能内容拼成一个大文件。
+- 内置、marketplace、插件及 Connector 随附技能不在此仓库内重复 vendoring；这些技能由各自上游管理。
 
-不处理：非 GitHub 托管平台上的项目、与 Python 无关的专属工程约定、CI 流水线排障。
+`skills-manifest.json` 是机器可读目录，记录技能名称、分类、包目录和来源。用户级个人技能的原始目录名也记录在 `source_directory` 中；如 `self-improving-agent__skillhub` 这种来源名与技能元数据 `name` 不同的情形，保留两者映射。
 
-## 目录结构
+## 分类结构
 
-```
-.
-├── SKILL.md                      # 主文档：规则、流程、红线、速查表
-├── README.md
-├── .gitignore
-└── scripts/
-    ├── gh_preflight.py           # 前置检查：Python / PyGithub / token / 仓库可达
-    └── collect_pr_context.py     # PR 上下文采集：元信息 + diff + 规范文件
-```
+| 分类 | 数量 | 内容 |
+|---|---:|---|
+| `research/literature-and-mapping` | 6 | 深度调研、论文阅读、文献侦察与知识地图 |
+| `research/ideas-and-methods` | 4 | idea 评估、挑战定义、创新验证、MOGP-U 研究内核 |
+| `research/benchmarks-and-reproduction` | 5 | benchmark 清单、SOTA 表、baseline 比较与复现 |
+| `research/writing-and-publication` | 8 | 论文写作、模板、数学笔记、投稿前审查与 venue 核验 |
+| `research/workflows` | 3 | 多轮研究编排、vibe research、周度复盘 |
+| `career-and-jobs` | 1 | 求职准备与 AI 辅助练习 |
+| `ai-information` | 1 | AI HOT 动态检索与简报 |
+| `documents-and-conversion` | 1 | Markdown / CSV 离线转 PDF |
+| `visualization` | 2 | Draw.io 重建与科研图设计 |
+| `developer-tools` | 2 | GitHub Python 仓库 / PR 工作流与技能仓库移植 |
+| `agent-meta` | 1 | 自我改进与经验记录 |
 
-## 依赖
+完整包路径见 `skills/`；每个包都保留自己的 `SKILL.md`，有附属资源时也保留原 `scripts/`、`references/`、`assets/` 等目录。
 
-- Python >= 3.10
-- `pygithub`
-- 可选 `gh` CLI（用于回退取 token、提交 PR 评论）
+## 后续维护
 
-```bash
-pip install pygithub
-export GITHUB_TOKEN=<your_token>
-```
-
-## 快速验证
-
-前置检查，确认解释器、PyGithub、token 与目标仓库均可用：
-
-```bash
-python3 scripts/gh_preflight.py --repo octocat/Hello-World
-```
-
-通过后输出：
-
-```json
-{
-  "repo": "octocat/Hello-World",
-  "default_branch": "master",
-  "private": false,
-  "authenticated_as": "<your_login>"
-}
-```
-
-采集 PR 上下文：
-
-```bash
-python3 scripts/collect_pr_context.py --repo owner/repo --pr 42 --out /tmp/pr-42.json
-```
-
-## 触发场景
-
-- 给出仓库、PR、commit 或文件行链接，要求读代码、定位某段逻辑
-- 要求评审某个 Pull Request，或指出 diff 中的潜在缺陷
-- 要求修改、重构、修复 Python 代码并提交，或准备 PR 描述
-
-## 红线
-
-- 发表评论、push、开 PR、合并之前，必须由用户本人确认
-- 不删除、不跳过、不放宽测试来让门禁通过
-- 不臆测代码行为，结论必须来自实际读到的代码或 API 返回
+1. 新增用户级 skill 时，将完整技能目录复制到最匹配的分类下。
+2. 更新 `skills-manifest.json`，补充源目录、技能元数据名称、包目录和分类。
+3. 如果对仓库副本作了修改，注意同步回 `~/.workbuddy/skills/`，或明确将仓库标为该技能的新 source of truth；避免两边悄悄分叉。
+4. 推送前检查所有新增文件与 skill 内容，确认未包含密钥、个人数据、公司机密或不应公开的资料。此仓库本次只在本地重构，未提交、未推送。

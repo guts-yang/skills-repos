@@ -1,0 +1,19 @@
+{
+  "slug": "self-improving-agent",
+  "name": "self-improving agent",
+  "version": "3.0.24",
+  "installedAt": 1788866110249,
+  "source": "skillhub",
+  "namespace": "clawhub_pskoett",
+  "canonicalName": "@clawhub_pskoett/self-improving-agent",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "description_zh": "记录自身发现以实现自我改进的技能",
+  "description_en": "A skill where the agent logs it's own findings for self-improvement",
+  "installs": 1177986,
+  "iconLocalPath": "/Users/chenyliao/.workbuddy/skills/self-improving-agent__skillhub/_icon.png",
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+  "installedContentHash": "sha256:3eff4d01c9e27557fe6460a1fafa33969a5b4eb30ab85e3d78e033aef57caffe"
+}

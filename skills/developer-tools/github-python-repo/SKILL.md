@@ -16,7 +16,7 @@ description: |
 ## 一、前置检查（唯一入口，先做）
 
 ```bash
-python3 github-python-repo/scripts/gh_preflight.py --repo <owner/repo>
+python3 skills/developer-tools/github-python-repo/scripts/gh_preflight.py --repo <owner/repo>
 ```
 
 脚本按序校验：Python 版本 ≥ 3.10 → `pygithub` 可导入 → 能取到 token（`GITHUB_TOKEN` 或 `gh auth token`）
@@ -89,7 +89,7 @@ python3 github-python-repo/scripts/gh_preflight.py --repo <owner/repo>
 链接格式：`https://github.com/{owner}/{repo}/pull/{N}`。
 
 ```bash
-python3 github-python-repo/scripts/collect_pr_context.py \
+python3 skills/developer-tools/github-python-repo/scripts/collect_pr_context.py \
   --repo <owner/repo> --pr <N> --out /tmp/gh-repo/pr-<N>.json
 ```
 
@@ -284,8 +284,8 @@ pytest -q <相关用例路径>
 
 | 事项 | 位置 |
 |---|---|
-| 前置检查 | `scripts/gh_preflight.py --repo <owner/repo>` |
-| PR 上下文采集 | `scripts/collect_pr_context.py --repo <owner/repo> --pr <N> --out <path>` |
+| 前置检查 | `python3 skills/developer-tools/github-python-repo/scripts/gh_preflight.py --repo <owner/repo>` |
+| PR 上下文采集 | `python3 skills/developer-tools/github-python-repo/scripts/collect_pr_context.py --repo <owner/repo> --pr <N> --out <path>` |
 | 只读查看某 ref 的文件 | `git show origin/<ref>:<path>` |
 | 提交行内评论 | `gh api -X POST repos/<owner>/<repo>/pulls/<N>/reviews` |
 | 本地门禁 | `ruff check` / `ruff format --check` / `mypy` / `pytest` |
